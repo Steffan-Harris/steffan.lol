@@ -1,10 +1,14 @@
 .textArt {
   font-family: monospace;
-  font-size: 1rem;
   line-height: 1;
   overflow: auto;
-  padding: 1rem;
   white-space: pre;
-  font-size: 9px;
-  margin: 0 auto;
+}
+
+.textArt.medium {
+  font-size: 1rem;
+}
+
+.textArt.large {
+  font-size: 1rem;
 }

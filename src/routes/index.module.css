@@ -1,13 +1,4 @@
-.homepage {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  margin-top: 16px;
-}
-
-.avatar {
-  display: block;
-  margin: 0 auto;
+.avatar img {
   width: 180px;
 }
 
@@ -19,6 +10,51 @@
   margin: 0;
 }
 
-.navigation {
-  margin-top: 12px;
+
+@media only screen and (min-width: 600px) {
+  .homepage {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 7fr 1fr;
+    gap: 20px;
+    max-width: 1180px;
+    margin: 40px 0;
+  }
+
+  .avatar {
+    grid-column-start: 2;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    grid-column-start: 4;
+  }
+
+
+  .mailboxArt {
+    opacity: 0.6;
+    margin-top: 40px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .homepage {
+    margin: 32px 16px;
+  }
+
+  .homepage,
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  .avatar {
+    margin: 0 auto;
+  }
+
+  .mailboxArt {
+    display: none;
+  }
 }
