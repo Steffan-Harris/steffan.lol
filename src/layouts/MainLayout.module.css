@@ -1,0 +1,39 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pageTitle {
+  margin: 0;
+  font-size: 32px;
+  font-family: "Quantico", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: lowercase;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.topNav {
+  align-content: center;
+}
+
+.content {
+  margin-top: 16px;
+}
+
+.overlay.hide {
+  display: none;
+}
+
+.closeMenu {
+  width: 25px;
+  align-self: self-end;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,12 @@
+.heading {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Quantico", sans-serif;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
