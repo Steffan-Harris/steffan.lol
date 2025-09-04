@@ -20,10 +20,6 @@
   align-content: center;
 }
 
-.content {
-  margin-top: 16px;
-}
-
 .overlay.hide {
   display: none;
 }
@@ -33,7 +29,52 @@
   align-self: self-end;
 }
 
-.main {
-  display: flex;
-  flex-direction: column;
+.footer {
+  margin-top: 48px;
+}
+
+@media only screen and (min-width: 600px) {
+  .layout {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 16px 32px;
+  }
+
+  .topNav {
+    display: none;
+  }
+
+  .topNavLinks {
+    text-transform: lowercase;
+    align-content: center;
+  }
+
+  .topNavLinks nav {
+    align-content: center;
+  }
+
+  .topNavLinks ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin: 0;
+  }
+
+  .content {
+    margin-top: 48px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .layout {
+    padding: 16px;
+  }
+
+  .topNavLinks {
+    display: none;
+  }
+
+  .content {
+    margin-top: 16px;
+  }
 }

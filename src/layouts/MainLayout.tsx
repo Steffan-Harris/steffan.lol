@@ -21,7 +21,7 @@ function MainLayout({
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <>
+    <div className={styles.layout}>
       <div className={styles.header}>
         <h1 className={clsx(isOpen && styles.hidden, styles.pageTitle)}>
           {pageTitle}
@@ -43,45 +43,79 @@ function MainLayout({
             />
           )}
         </div>
+        <div className={styles.topNavLinks}>
+          <nav>
+            <ul>
+              <li>
+                <Link to="/" onClick={() => setIsOpen(false)}>
+                  <span>Home</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" onClick={() => setIsOpen(false)}>
+                  <span>About Me</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/projects" onClick={() => setIsOpen(false)}>
+                  <span>Projects</span>
+                </Link>
+              </li>
+              <li>
+                <a href="mailto:hello@steffan.lol">
+                  <span>Email</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/steffanharris">
+                  <span>LinkedIn</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
-      <div className={styles.content}></div>
-      {isOpen ? (
-        <nav>
-          <Links>
-            <li>
-              <Link to="/" onClick={() => setIsOpen(false)}>
-                <span>Home</span>
-              </Link>
-            </li>
-            <li>
-              <Link to="/about" onClick={() => setIsOpen(false)}>
-                <span>About Me</span>
-              </Link>
-            </li>
-            <li>
-              <Link to="/projects" onClick={() => setIsOpen(false)}>
-                <span>Projects</span>
-              </Link>
-            </li>
-            <li>
-              <a href="mailto:hello@steffan.lol">
-                <span>Email</span>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/steffanharris">
-                <span>LinkedIn</span>
-              </a>
-            </li>
-          </Links>
-        </nav>
-      ) : (
-        <main className={clsx(className, styles.main)}>
-          {children}
-          <Copyright />
-        </main>
-      )}
-    </>
+      <div className={styles.content}>
+        {isOpen ? (
+          <nav>
+            <Links>
+              <li>
+                <Link to="/" onClick={() => setIsOpen(false)}>
+                  <span>Home</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" onClick={() => setIsOpen(false)}>
+                  <span>About Me</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/projects" onClick={() => setIsOpen(false)}>
+                  <span>Projects</span>
+                </Link>
+              </li>
+              <li>
+                <a href="mailto:hello@steffan.lol">
+                  <span>Email</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/steffanharris">
+                  <span>LinkedIn</span>
+                </a>
+              </li>
+            </Links>
+          </nav>
+        ) : (
+          <main className={clsx(className)}>
+            {children}
+          </main>
+        )}
+      </div>
+      <div className={styles.footer}>
+        <Copyright />
+      </div>
+    </div>
   );
 }
 

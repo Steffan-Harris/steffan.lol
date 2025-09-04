@@ -1,4 +1,54 @@
-.main {
-  gap: 64px;
-  margin-top: 16px;
+.art {
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 600px) {
+  .main {
+    display: grid;
+    /* border-left: 2px dashed; */
+    background-image: url('/dash.svg');
+    background-repeat: repeat-y;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 10px;
+    row-gap: 120px;
+  }
+
+  .section {
+    grid-column-start: 2;
+    grid-column-end: 6;
+    /* display: flex;
+    flex-direction: column;
+    gap: 64px; */
+  }
+
+  .art {
+    grid-column-start: 8;
+  }
+
+  .art:first-of-type {
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+  .art:nth-of-type(2) {
+    grid-row-start: 3;
+    grid-row-end: 5;
+  }
+
+  .art:last-of-type {
+    grid-row-start: 5;
+    grid-row-end: 7;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .section {
+    margin-top: 16px;
+  }
 }

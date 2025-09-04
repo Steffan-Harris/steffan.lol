@@ -5,7 +5,7 @@ import clsx from "clsx";
 interface TextArtProps {
   label: string;
   className?: string;
-  size?: 'medium' | 'large';
+  size?: 'small' | 'medium' | 'large';
 }
 
 function TextArt({ label, className, size = 'medium', children }: PropsWithChildren<TextArtProps>) {

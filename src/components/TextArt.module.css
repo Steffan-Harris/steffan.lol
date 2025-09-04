@@ -1,8 +1,13 @@
 .textArt {
   font-family: monospace;
   line-height: 1;
-  overflow: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
   white-space: pre;
+}
+
+.textArt.small {
+  font-size: 0.6rem;
 }
 
 .textArt.medium {

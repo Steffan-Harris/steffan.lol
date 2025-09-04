@@ -1,4 +1,6 @@
 .main {
-  gap: 32px;
-  margin-top: 32px;
+  gap: 48px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 16px;
 }

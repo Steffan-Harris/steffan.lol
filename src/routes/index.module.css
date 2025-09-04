@@ -43,15 +43,16 @@
     margin: 32px 16px;
   }
 
-  .homepage,
   .content {
     display: flex;
     flex-direction: column;
     gap: 48px;
   }
 
-  .avatar {
+  .avatar img {
     margin: 0 auto;
+    display: block;
+    margin-bottom: 48px;
   }
 
   .mailboxArt {
