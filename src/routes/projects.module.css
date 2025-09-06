@@ -2,12 +2,20 @@
   margin-top: 60px;
 }
 
-.project:first-child {
-  grid-column-start: 2;
-  grid-column-end: 6;
+@media only screen and (max-width: 600px) {
+  .projects {
+    gap: 32px;
+  }
 }
 
-.project:nth-of-type(2) {
-  grid-column-start: 7;
-  grid-column-end: 11;
+@media only screen and (min-width: 600px) {
+  .project:first-child {
+    grid-column-start: 2;
+    grid-column-end: 6;
+  }
+
+  .project:nth-of-type(2) {
+    grid-column-start: 7;
+    grid-column-end: 11;
+  }
 }

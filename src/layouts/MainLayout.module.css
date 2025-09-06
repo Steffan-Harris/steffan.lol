@@ -30,6 +30,7 @@
   .mainContent {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    column-gap: 10px;
     margin-top: 60px;
   }
 }
@@ -96,6 +97,7 @@
   .footer {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    column-gap: 10px;
 
     margin-top: 120px;
   }
