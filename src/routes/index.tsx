@@ -22,7 +22,7 @@ function Index() {
           <Links>
             <li>
               <Link to="/about">
-                <span>About me</span>
+                <span>About</span>
               </Link>
             </li>
             <li>
