@@ -2,7 +2,13 @@
     text-transform: lowercase;
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 16px;
+}
+
+@media only screen and (min-width: 600px) {
+    .footer {
+        gap: 32px
+    }
 }
 
 .links {
@@ -28,11 +34,11 @@
 }
 
 .footer :global(.textart) {
-    font-size: 9px;
+    font-size: 7px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 600px) {
     .footer :global(.textart) {
-        font-size: 7px;
+        font-size: 9px;
     }
 }

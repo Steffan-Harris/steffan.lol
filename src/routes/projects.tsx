@@ -12,6 +12,7 @@ function RouteComponent() {
     <MainLayout pageTitle="Projects" className={styles.projects}>
       <Project className={styles.project} heading="steffan.lol" href='https://github.com/Steffan-Harris/steffan.lol'>The Github repo for this site.
         Vite + React.</Project>
+      <Project className={styles.project} heading="blitzjs.com" href='https://blitzjs.com'>The frontpage of Blitz. NextJS + Tailwind.</Project>
     </MainLayout>
   );
 }

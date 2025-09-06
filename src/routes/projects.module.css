@@ -1,4 +1,13 @@
-.project {
+.projects {
+  margin-top: 60px;
+}
+
+.project:first-child {
   grid-column-start: 2;
   grid-column-end: 6;
+}
+
+.project:nth-of-type(2) {
+  grid-column-start: 7;
+  grid-column-end: 11;
 }

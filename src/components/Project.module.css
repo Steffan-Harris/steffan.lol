@@ -1,0 +1,10 @@
+.project {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.heading {
+    margin: 0;
+    padding: 0;
+}

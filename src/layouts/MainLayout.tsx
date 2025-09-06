@@ -22,7 +22,7 @@ function MainLayout({
 
   return (
     <div className={styles.layout}>
-      <div className={styles.header}>
+      <header className={styles.header}>
         <h1 className={clsx(isOpen && styles.hidden, styles.pageTitle)}>
           {pageTitle}
         </h1>
@@ -62,7 +62,7 @@ function MainLayout({
             </ul>
           </nav>
         </div>
-      </div>
+      </header>
       {isOpen ? (
         <nav className={styles.verticalNav}>
           <Links>
@@ -88,8 +88,8 @@ function MainLayout({
           <main className={clsx(className, styles.mainContent)}>
             {children}
           </main>
-          <div className={clsx(styles.footer, isOpen && styles.hidden)}>
-            <Footer />
+          <div className={styles.footer}>
+            <Footer className={clsx(isOpen && styles.hidden)} />
           </div>
         </>
       )}
