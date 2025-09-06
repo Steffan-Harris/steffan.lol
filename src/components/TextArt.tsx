@@ -5,12 +5,11 @@ import clsx from "clsx";
 interface TextArtProps {
   label: string;
   className?: string;
-  size?: 'small' | 'medium' | 'large';
 }
 
-function TextArt({ label, className, size = 'medium', children }: PropsWithChildren<TextArtProps>) {
+function TextArt({ label, className, children }: PropsWithChildren<TextArtProps>) {
   return (
-    <pre aria-label={label} className={clsx(styles.textArt, styles[size], className)}>
+    <pre aria-label={label} className={clsx(styles.textArt, className, 'textart')}>
       {children}
     </pre>
   );

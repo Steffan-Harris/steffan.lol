@@ -14,7 +14,7 @@ export const Route = createFileRoute("/about")({
 
 function RouteComponent() {
   return (
-    <MainLayout pageTitle="About me" className={styles.main}>
+    <MainLayout pageTitle="About" className={styles.about}>
 
       <Section heading="1988" className={styles.section}>
         <Paragraph>
@@ -22,7 +22,7 @@ function RouteComponent() {
         </Paragraph>
       </Section>
 
-      <TextArt size="small" label="ASCII art depicting a macintosh computer" className={styles.art}>
+      <TextArt label="ASCII art depicting a macintosh computer">
         {macintosh}
       </TextArt>
 
@@ -41,7 +41,7 @@ function RouteComponent() {
         </Paragraph>
       </Section>
 
-      <TextArt size='small' label="ASCII art depicting a personal computer desk" className={styles.art}>{network}</TextArt>
+      <TextArt label="ASCII art depicting a personal computer desk">{network}</TextArt>
 
 
       <Section heading="2019" className={styles.section}>
@@ -55,7 +55,7 @@ function RouteComponent() {
         </Paragraph>
       </Section>
 
-      <TextArt size='small' label="ASCII art depicting an apple studio display" className={styles.art}>{studioDisplay}</TextArt>
+      <TextArt label="ASCII art depicting an apple studio display">{studioDisplay}</TextArt>
 
     </MainLayout>
   );

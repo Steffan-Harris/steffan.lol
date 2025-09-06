@@ -6,7 +6,7 @@ import menuClose from "../assets/menu-close.png";
 
 import clsx from "clsx";
 import Links from "../components/Links";
-import Copyright from "../components/Copyright";
+import Footer from "../components/Footer";
 
 interface MainLayoutProps {
   pageTitle: string;
@@ -26,24 +26,22 @@ function MainLayout({
         <h1 className={clsx(isOpen && styles.hidden, styles.pageTitle)}>
           {pageTitle}
         </h1>
-        <div className={styles.topNav}>
+        <div className={styles.menu}>
           {isOpen ? (
             <img
               src={menuClose}
               alt="Hide menu"
               onClick={() => setIsOpen(false)}
-              className={styles.closeMenu}
             />
           ) : (
             <img
               src={menu}
-              className={clsx(isOpen && styles.hide)}
               alt="Show menu"
               onClick={() => setIsOpen(true)}
             />
           )}
         </div>
-        <div className={styles.topNavLinks}>
+        <div className={styles.horizontalNav}>
           <nav>
             <ul>
               <li>
@@ -53,68 +51,48 @@ function MainLayout({
               </li>
               <li>
                 <Link to="/about" onClick={() => setIsOpen(false)}>
-                  <span>About Me</span>
+                  <span>About</span>
                 </Link>
               </li>
               <li>
                 <Link to="/projects" onClick={() => setIsOpen(false)}>
                   <span>Projects</span>
                 </Link>
-              </li>
-              <li>
-                <a href="mailto:hello@steffan.lol">
-                  <span>Email</span>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/in/steffanharris">
-                  <span>LinkedIn</span>
-                </a>
               </li>
             </ul>
           </nav>
         </div>
       </div>
-      <div className={styles.content}>
-        {isOpen ? (
-          <nav>
-            <Links>
-              <li>
-                <Link to="/" onClick={() => setIsOpen(false)}>
-                  <span>Home</span>
-                </Link>
-              </li>
-              <li>
-                <Link to="/about" onClick={() => setIsOpen(false)}>
-                  <span>About Me</span>
-                </Link>
-              </li>
-              <li>
-                <Link to="/projects" onClick={() => setIsOpen(false)}>
-                  <span>Projects</span>
-                </Link>
-              </li>
-              <li>
-                <a href="mailto:hello@steffan.lol">
-                  <span>Email</span>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/in/steffanharris">
-                  <span>LinkedIn</span>
-                </a>
-              </li>
-            </Links>
-          </nav>
-        ) : (
-          <main className={clsx(className)}>
+      {isOpen ? (
+        <nav className={styles.verticalNav}>
+          <Links>
+            <li>
+              <Link to="/" onClick={() => setIsOpen(false)}>
+                <span>Home</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="/about" onClick={() => setIsOpen(false)}>
+                <span>About</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="/projects" onClick={() => setIsOpen(false)}>
+                <span>Projects</span>
+              </Link>
+            </li>
+          </Links>
+        </nav>
+      ) : (
+        <>
+          <main className={clsx(className, styles.mainContent)}>
             {children}
           </main>
-        )}
-      </div>
-      <div className={styles.footer}>
-        <Copyright />
-      </div>
+          <div className={clsx(styles.footer, isOpen && styles.hidden)}>
+            <Footer />
+          </div>
+        </>
+      )}
     </div>
   );
 }

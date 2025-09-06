@@ -1,9 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import styles from "./index.module.css";
 import Links from "../components/Links";
-import Copyright from "../components/Copyright";
-import mailbox from '../assets/mailbox.art'
-import TextArt from "../components/TextArt";
+import Footer from "../components/Footer";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -17,7 +15,7 @@ function Index() {
       </div>
       <div className={styles.content}>
         <p className={styles.intro}>
-          I am a frontend developer and UI engineer creating beautiful and
+          I am a frontend developer and UI student creating beautiful and
           functional web apps focusing on the react and javascript ecosystem
         </p>
         <nav className={styles.nav}>
@@ -32,23 +30,10 @@ function Index() {
                 <span>Projects</span>
               </Link>
             </li>
-            <li>
-              <a href="mailto:hello@steffan.lol">
-                <span>Email</span>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/steffanharris">
-                <span>LinkedIn</span>
-              </a>
-            </li>
           </Links>
         </nav>
         <div className={styles.footer}>
-          <TextArt size='large' label='ASCII art depicting a computer mailbox' className={styles.mailboxArt}>
-            {mailbox}
-          </TextArt>
-          <Copyright />
+          <Footer />
         </div>
       </div>
     </div>

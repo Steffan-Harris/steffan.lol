@@ -1,19 +1,7 @@
 .textArt {
-  font-family: monospace;
+  font-family: ui-monospace, SFMono-Regular, monospace;
   line-height: 1;
   overflow-x: auto;
   overflow-y: hidden;
   white-space: pre;
-}
-
-.textArt.small {
-  font-size: 0.6rem;
-}
-
-.textArt.medium {
-  font-size: 1rem;
-}
-
-.textArt.large {
-  font-size: 1rem;
 }

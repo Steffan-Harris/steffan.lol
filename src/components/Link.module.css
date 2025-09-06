@@ -1,0 +1,38 @@
+.link {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    overflow-x: hidden;
+    font-size: 20px;
+
+    font-family: "Orbit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: lowercase;
+}
+
+.link span:before {
+    float: left;
+    width: 0;
+    white-space: nowrap;
+    content: "------------------------------------"
+        "------------------------------------"
+        "------------------------------------";
+}
+
+.link a {
+    width: 100%;
+    display: inline-block;
+}
+
+.link a:after {
+    content: "\00a0>";
+    float: right;
+    background-color: black;
+    z-index: 1;
+}
+
+.link a span {
+    background-color: black;
+    padding-right: 0.5em;
+}

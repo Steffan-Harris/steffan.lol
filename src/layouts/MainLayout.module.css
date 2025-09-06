@@ -12,25 +12,30 @@
   text-transform: lowercase;
 }
 
-.hidden {
+.pageTitle.hidden {
   visibility: hidden;
 }
 
-.topNav {
-  align-content: center;
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
 }
 
-.overlay.hide {
-  display: none;
+.verticalNav {
+  margin-top: 32px;
 }
 
-.closeMenu {
-  width: 25px;
-  align-self: self-end;
+@media only screen and (min-width: 600px) {
+  .mainContent {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin-top: 60px;
+  }
 }
 
-.footer {
-  margin-top: 48px;
+.layout {
+  padding: 16px;
 }
 
 @media only screen and (min-width: 600px) {
@@ -39,42 +44,56 @@
     margin: 0 auto;
     padding: 16px 32px;
   }
+}
 
-  .topNav {
+
+.menu {
+  display: block;
+  align-content: center;
+}
+
+.closeMenu {
+  width: 25px;
+  align-self: self-end;
+}
+
+@media only screen and (min-width: 600px) {
+
+  .menu,
+  .closeMenu {
     display: none;
   }
+}
 
-  .topNavLinks {
+.horizontalNav {
+  display: none;
+}
+
+@media only screen and (min-width: 600px) {
+  .horizontalNav {
     text-transform: lowercase;
     align-content: center;
+    display: block;
   }
 
-  .topNavLinks nav {
+  .horizontalNav nav {
     align-content: center;
   }
 
-  .topNavLinks ul {
+  .horizontalNav ul {
     list-style: none;
     display: flex;
     gap: 40px;
     margin: 0;
   }
-
-  .content {
-    margin-top: 48px;
-  }
 }
 
-@media only screen and (max-width: 600px) {
-  .layout {
-    padding: 16px;
-  }
+.footer {
+  margin-top: 90px;
+}
 
-  .topNavLinks {
-    display: none;
-  }
-
-  .content {
-    margin-top: 16px;
+@media only screen and (min-width: 600px) {
+  .footer {
+    margin-top: 120px;
   }
 }

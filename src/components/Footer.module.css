@@ -1,0 +1,38 @@
+.footer {
+    text-transform: lowercase;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.links {
+    display: flex;
+    gap: 32px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.links a {
+    opacity: 0.5;
+    color: #cbc7b2;
+}
+
+.copyright {
+    opacity: 0.5;
+}
+
+.links a:hover {
+    opacity: 1;
+    text-decoration: none;
+}
+
+.footer :global(.textart) {
+    font-size: 9px;
+}
+
+@media only screen and (max-width: 600px) {
+    .footer :global(.textart) {
+        font-size: 7px;
+    }
+}

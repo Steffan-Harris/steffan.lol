@@ -1,6 +1,4 @@
-.main {
-  gap: 48px;
-  display: flex;
-  flex-direction: column;
-  padding-top: 16px;
+.project {
+  grid-column-start: 2;
+  grid-column-end: 6;
 }
