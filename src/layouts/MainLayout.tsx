@@ -3,6 +3,7 @@ import styles from "./MainLayout.module.css";
 
 import clsx from "clsx";
 import Header from "../components/Header";
+import ExternalLinks from "../components/ExternalLinks";
 
 interface MainLayoutProps {
   pageTitle: string;
@@ -21,6 +22,7 @@ function MainLayout({
         {children}
       </main>
       <footer className={styles.footer}>
+        <ExternalLinks className={styles.externalLinks} size="lg" />
         <div className={styles.copyright}>&copy; 2025 steffan harris</div>
       </footer>
     </div>

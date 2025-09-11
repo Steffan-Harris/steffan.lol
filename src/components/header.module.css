@@ -4,17 +4,17 @@
     position: sticky;
     top: 0;
     background-color: black;
+    padding: 16px;
 }
 
-@media only screen and (max-width: 600px) {
-    .header {
-        padding: 16px;
-    }
+.showNav {
+    align-self: center;
+    display: flex;
 }
 
 @media only screen and (min-width: 600px) {
-    .header {
-        padding-top: 16px;
+    .showNav {
+        display: none;
     }
 }
 
@@ -46,31 +46,13 @@
     }
 }
 
-.showNav {
-    align-self: center;
-    display: flex;
-}
+/**** navigation container ****/
 
-.navLinkList {
-    list-style-type: none;
-
-    font-family: "Orbit", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    text-transform: lowercase;
-
-    font-size: 20px;
-}
-
-.navLink a span {
-    text-decoration: underline;
-    text-decoration-color: transparent;
-    transition: 0.3s;
-    text-decoration-thickness: 3px;
-}
-
-.navLink a:hover span {
-    text-decoration-color: white;
+@media only screen and (min-width: 600px) {
+    .nav {
+        display: block;
+        align-self: center
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -88,21 +70,23 @@
         background-color: black;
     }
 
-    .hideNav {
-        margin: 16px;
-        height: 36px;
-        display: flex;
+    .nav.open {
+        width: 100%;
     }
+}
 
-    .hideNav a {
-        align-self: center;
-    }
+.navLinkList {
+    list-style-type: none;
 
-    .hideNav img {
-        width: 25px;
-        height: 25px;
-    }
+    font-family: "Orbit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: lowercase;
 
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 600px) {
     .navLinkList {
         margin: 16px;
         padding: 0;
@@ -111,8 +95,28 @@
         gap: 16px;
         overflow-x: hidden;
     }
+}
 
+@media only screen and (min-width: 600px) {
+    .navLinkList {
+        margin: 0;
+        display: flex;
+        gap: 40px;
+    }
+}
 
+.navLink a span {
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: 0.3s;
+    text-decoration-thickness: 3px;
+}
+
+.navLink a:hover span {
+    text-decoration-color: white;
+}
+
+@media only screen and (max-width: 600px) {
     .navLink:before {
         float: left;
         width: 0;
@@ -143,41 +147,43 @@
         opacity: 1;
         padding-right: 1rem;
     }
+}
 
-    .externalLinks {
+/**** hide nav button ****/
+
+@media only screen and (max-width: 600px) {
+    .hideNav {
+        height: 36px;
         display: flex;
-        list-style-type: none;
-        margin: 64px 0 0 0;
-        padding: 0;
-        gap: 32px;
+        margin: 16px;
     }
 
-    .externalLinks li a {
-        color: #827F72;
-        font-size: 7px;
-        transition: 0.2s;
+    .hideNav a {
+        align-self: center;
     }
 
-    .externalLinks li a:hover {
-        text-decoration: none;
-        color: white;
+    .hideNav img {
+        width: 25px;
+        height: 25px;
     }
 }
 
 @media only screen and (min-width: 600px) {
-    .nav {
-        align-self: center;
-    }
-
-    .showNav,
-    .hideNav,
-    .externalLinks {
+    .hideNav {
         display: none;
     }
+}
 
-    .navLinkList {
-        margin: 0;
+/**** external links - github, linkedin, email ****/
+
+@media only screen and (max-width: 600px) {
+    .externalLinks {
         display: flex;
-        gap: 40px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .externalLinks {
+        display: none
     }
 }

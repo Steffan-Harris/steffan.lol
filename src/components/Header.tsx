@@ -1,14 +1,11 @@
-import { useEffect, useRef, type PropsWithChildren } from "react"
+import { useRef, type PropsWithChildren } from "react"
 import styles from './header.module.css'
 import { Link } from "@tanstack/react-router"
 import menu from '../assets/menu.png'
 import menuClose from '../assets/menu-close.png'
-import githubArt from "../assets/github.art"
-import emailArt from "../assets/email.art"
-import linkedinArt from "../assets/linkedin.art"
-import TextArt from "./TextArt"
 import useScrollPosition from "../hooks/useScrollPosition"
 import clsx from "clsx"
+import ExternalLinks from "./ExternalLinks"
 
 interface HeaderProps {
     pageTitle: string
@@ -21,7 +18,7 @@ function Header({ pageTitle }: PropsWithChildren<HeaderProps>) {
     return <header className={styles.header}>
         <a className={styles.showNav} href='javascript:void(0)' onClick={() => {
             if (navRef.current) {
-                navRef.current.style.width = "100%"
+                navRef.current.classList.add(styles.open)
             }
         }}>
             <img
@@ -36,7 +33,7 @@ function Header({ pageTitle }: PropsWithChildren<HeaderProps>) {
             <div className={styles.hideNav}>
                 <a href="javascript: void(0)" onClick={() => {
                     if (navRef.current) {
-                        navRef.current.style.width = "0%"
+                        navRef.current.classList.remove(styles.open)
                     }
                 }}>
                     <img
@@ -62,23 +59,7 @@ function Header({ pageTitle }: PropsWithChildren<HeaderProps>) {
                             <span>Public projects</span>
                         </Link>
                     </li>
-                    <ul className={styles.externalLinks}>
-                        <li>
-                            <a href='https://github.com/Steffan-Harris'>
-                                <TextArt label="ASCII art depicting the Github logo">{githubArt}</TextArt>
-                            </a>
-                        </li>
-                        <li>
-                            <a href='mailto:contact@steffan.lol'>
-                                <TextArt label="ASCII art depicting an email">{emailArt}</TextArt>
-                            </a>
-                        </li>
-                        <li>
-                            <a href='https://www.linkedin.com/in/steffanharris/'>
-                                <TextArt label="ASCII art depicting the Linkedin logo">{linkedinArt}</TextArt>
-                            </a>
-                        </li>
-                    </ul>
+                    <ExternalLinks className={styles.externalLinks} />
                 </ul>
             </nav>
         </div>

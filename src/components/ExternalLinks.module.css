@@ -1,0 +1,24 @@
+.externalLinks {
+    list-style-type: none;
+    margin: 64px 0 0 0;
+    padding: 0;
+    gap: 32px;
+}
+
+.externalLinks li a {
+    color: #827F72;
+    transition: 0.2s;
+}
+
+.externalLinks.md li a {
+    font-size: 7px;
+}
+
+.externalLinks.lg li a {
+    font-size: 9px;
+}
+
+.externalLinks li a:hover {
+    text-decoration: none;
+    color: white;
+}

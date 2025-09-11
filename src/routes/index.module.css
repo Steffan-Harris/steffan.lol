@@ -1,5 +1,5 @@
 .homepage {
-  margin: 32px 16px;
+  margin: 16px;
 }
 
 @media only screen and (min-width: 600px) {
@@ -15,9 +15,8 @@
 
 .avatar img {
   width: 180px;
-  margin: 0 auto 48px auto;
+  margin: 0 auto;
   display: block;
-
 }
 
 @media only screen and (min-width: 600px) {
@@ -30,12 +29,17 @@
 .content {
   display: flex;
   flex-direction: column;
-  gap: 48px;
 }
+
+@media only screen and (max-width: 600px) {
+  .content {
+    margin-top: 48px;
+  }
+}
+
 
 @media only screen and (min-width: 600px) {
   .content {
-    gap: 80px;
     grid-column-start: 4;
   }
 }
@@ -48,12 +52,44 @@
   margin: 0;
 }
 
+.nav {
+  margin-top: 64px;
+}
+
+@media only screen and (min-width: 600px) {
+  .nav {
+    margin-top: 96px;
+  }
+}
+
 .footer {
-  margin-top: 48px;
+  margin-top: 128px;
 }
 
 @media only screen and (min-width: 600px) {
   .footer {
-    margin-top: 60px;
+    margin-top: 192px;
   }
+}
+
+.externalLinks {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  gap: 32px;
+}
+
+.externalLinks li a {
+  color: #827F72;
+  font-size: 7px;
+  transition: 0.2s;
+}
+
+.externalLinks li a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.copyright {
+  color: #827F72;
 }
