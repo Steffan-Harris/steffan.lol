@@ -1,5 +1,5 @@
 import { useRef, type PropsWithChildren } from "react"
-import styles from './header.module.css'
+import styles from './Header.module.css'
 import { Link } from "@tanstack/react-router"
 import menu from '../assets/menu.png'
 import menuClose from '../assets/menu-close.png'
