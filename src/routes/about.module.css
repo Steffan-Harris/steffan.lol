@@ -1,26 +1,32 @@
 @media only screen and (max-width: 600px) {
   .about {
     gap: 32px;
+    display: flex;
+    flex-direction: column;
   }
 }
 
 @media only screen and (min-width: 600px) {
   .about {
-    row-gap: 120px;
+    row-gap: 80px;
+    padding-top: 32px;
   }
 }
 
-.about :global(.textart) {
-  margin: 0 auto;
-  font-size: 9px;
+/**** Textart ****/
+
+@media only screen and (max-width: 600px) {
+  .about :global(.textart) {
+    margin: 0 auto;
+    font-size: 9px;
+  }
 }
 
 @media only screen and (min-width: 600px) {
   .about :global(.textart) {
-    font-size: 12px;
-  }
+    margin: 0;
 
-  .about :global(.textart) {
+    font-size: 12px;
     grid-column-start: 7;
     grid-column-end: -2;
     width: 100%;
@@ -28,26 +34,27 @@
     flex-direction: row-reverse;
   }
 
-  .about :global(.textart):first-of-type {
+  .macintoshArt {
     grid-row-start: 1;
     grid-row-end: 3;
   }
 
-  .about :global(.textart):nth-of-type(2) {
+  .networkArt {
     grid-row-start: 3;
     grid-row-end: 5;
-    align-items: start;
-  }
-
-  .about :global(.textart):last-of-type {
-    grid-row-start: 5;
-    grid-row-end: 7;
     align-items: end;
   }
-}
 
-.section {
-  margin-top: 16px;
+  .studioDisplayArt {
+    grid-row-start: 6;
+    grid-row-end: 8;
+  }
+
+  .cloudArt {
+    grid-row-start: 8;
+    grid-row-end: 10;
+    align-items: end;
+  }
 }
 
 @media only screen and (min-width: 600px) {

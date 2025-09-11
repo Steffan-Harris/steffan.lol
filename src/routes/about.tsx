@@ -1,12 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 import MainLayout from "../layouts/MainLayout";
 import styles from "./about.module.css";
-import macintosh from "../assets/macintosh.art.ts";
-import network from "../assets/network.art.ts";
-import studioDisplay from "../assets/studio-display.art.ts"
+import macintoshArt from "../assets/macintosh.art.ts";
+import networkArt from "../assets/network.art.ts";
+import studioDisplayArt from "../assets/studio-display.art.ts"
 import TextArt from "../components/TextArt.tsx";
 import Section from "../components/Section.tsx";
 import Paragraph from "../components/Paragraph.tsx";
+import cloudArt from "../assets/cloud.art.ts";
+import Heading from "../components/Heading.tsx";
 
 export const Route = createFileRoute("/about")({
   component: RouteComponent,
@@ -15,6 +17,7 @@ export const Route = createFileRoute("/about")({
 function RouteComponent() {
   return (
     <MainLayout pageTitle="About" className={styles.about}>
+      <Heading>About</Heading>
 
       <Section heading="1988" className={styles.section}>
         <Paragraph>
@@ -22,8 +25,8 @@ function RouteComponent() {
         </Paragraph>
       </Section>
 
-      <TextArt label="ASCII art depicting a macintosh computer">
-        {macintosh}
+      <TextArt label="ASCII art depicting a macintosh computer" className={styles.macintoshArt}>
+        {macintoshArt}
       </TextArt>
 
       <Section heading="2000" className={styles.section}>
@@ -41,21 +44,38 @@ function RouteComponent() {
         </Paragraph>
       </Section>
 
-      <TextArt label="ASCII art depicting a personal computer desk">{network}</TextArt>
+      <TextArt label="ASCII art depicting a personal computer desk" className={styles.networkArt}>{networkArt}</TextArt>
 
 
-      <Section heading="2019" className={styles.section}>
-        <Paragraph>I moved to frontend development and learnt Javascript and React.</Paragraph>
+      <Section heading="2020" className={styles.section}>
+        <Paragraph>I switched to frontend development and learnt Javascript and React.</Paragraph>
       </Section>
 
+      <Section heading="2022" className={styles.section}>
+        <Paragraph>I worked in agile environments on large applications, focusing on simplifying and modernising the frontend stack.</Paragraph>
+      </Section>
 
-      <Section heading="2024" className={styles.section}>
+      <Section heading="2023" className={styles.section}>
         <Paragraph>
-          I am currently a student at Shift Nudge learning UI design. I got a golden retriever.
+          I enrolled onto Shift Nudge to learn UI design.
         </Paragraph>
       </Section>
 
-      <TextArt label="ASCII art depicting an apple studio display">{studioDisplay}</TextArt>
+      <TextArt label="ASCII art depicting an apple studio display" className={styles.studioDisplayArt}>{studioDisplayArt}</TextArt>
+
+      <Section heading="2024" className={styles.section}>
+        <Paragraph>
+          I got Jesse - my golden retriever and companion :)
+        </Paragraph>
+      </Section>
+
+      <Section heading="2025" className={styles.section}>
+        <Paragraph>
+          I started working full stack, building node APIs and AWS lambda functions.
+        </Paragraph>
+      </Section>
+
+      <TextArt label="ASCII art depicting a cloud" className={styles.cloudArt}>{cloudArt}</TextArt>
 
     </MainLayout>
   );

@@ -37,7 +37,7 @@
     grid-template-columns: repeat(12, 1fr);
     column-gap: 20px;
     row-gap: 32px;
-    padding: 16p 0;
+    padding: 16px 0;
   }
 }
 
