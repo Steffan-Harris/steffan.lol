@@ -63,7 +63,6 @@
 .arrow .link a::after {
     content: "\00a0>";
     background-color: black;
-    z-index: 1;
 }
 
 .arrow .link a span {

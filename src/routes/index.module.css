@@ -62,32 +62,16 @@
   }
 }
 
-.footer {
-  margin-top: 128px;
+@media only screen and (max-width: 600px) {
+  .footer {
+    margin-top: 128px;
+  }
 }
 
 @media only screen and (min-width: 600px) {
   .footer {
-    margin-top: 192px;
+    margin-top: 128px;
   }
-}
-
-.externalLinks {
-  display: flex;
-  list-style-type: none;
-  padding: 0;
-  gap: 32px;
-}
-
-.externalLinks li a {
-  color: #827F72;
-  font-size: 7px;
-  transition: 0.2s;
-}
-
-.externalLinks li a:hover {
-  text-decoration: none;
-  color: white;
 }
 
 .copyright {

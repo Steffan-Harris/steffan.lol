@@ -1,10 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import styles from "./index.module.css";
-import TextArt from "../components/TextArt";
-import githubArt from "../assets/github.art";
-import emailArt from "../assets/email.art";
-import linkedinArt from "../assets/linkedin.art";
 import LinkList from "../components/LinkList";
+import Footer from "../components/Footer";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -35,14 +32,7 @@ function Index() {
             </li>
           </LinkList>
         </nav>
-        <footer className={styles.footer}>
-          <ul className={styles.externalLinks}>
-            <li><a href='https://github.com/Steffan-Harris'><TextArt label="ASCII art depicting the Github logo">{githubArt}</TextArt></a></li>
-            <li><a href='mailto:contact@steffan.lol'><TextArt label="ASCII art depicting an email">{emailArt}</TextArt></a></li>
-            <li><a href='https://www.linkedin.com/in/steffanharris/'><TextArt label="ASCII art depicting the Linkedin logo">{linkedinArt}</TextArt></a></li>
-          </ul>
-          <div className={styles.copyright}>&copy; 2025 steffan harris</div>
-        </footer>
+        <Footer useGrid={false} className={styles.footer} />
       </div>
     </div>
   );
