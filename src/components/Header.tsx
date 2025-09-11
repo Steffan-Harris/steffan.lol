@@ -7,6 +7,7 @@ import useScrollPosition from "../hooks/useScrollPosition"
 import clsx from "clsx"
 import ExternalLinks from "./ExternalLinks"
 import LinkList from "./LinkList"
+import useWindowDimensions from "../hooks/useWindowDimensions"
 
 interface HeaderProps {
     pageTitle: string
@@ -15,6 +16,7 @@ interface HeaderProps {
 function Header({ pageTitle }: PropsWithChildren<HeaderProps>) {
     const navRef = useRef<HTMLDivElement>(null)
     const scrollPosition = useScrollPosition()
+    const { width } = useWindowDimensions()
 
     return <header className={styles.header}>
         <a className={styles.showNav} href='javascript:void(0)' onClick={() => {
@@ -43,8 +45,8 @@ function Header({ pageTitle }: PropsWithChildren<HeaderProps>) {
                     />
                 </a>
             </div>
-            <nav>
-                <LinkList>
+            <nav className={styles.navLinks}>
+                <LinkList style={width > 600 ? 'simple' : 'arrow'}>
                     <li className={styles.navLink}>
                         <Link to="/">
                             <span>Home</span>
@@ -57,14 +59,14 @@ function Header({ pageTitle }: PropsWithChildren<HeaderProps>) {
                     </li>
                     <li className={styles.navLink}>
                         <Link to="/projects">
-                            <span>Public projects</span>
+                            <span>Projects</span>
                         </Link>
                     </li>
                     <ExternalLinks className={styles.externalLinks} />
                 </LinkList>
             </nav>
         </div>
-    </header >
+    </header>
 }
 
 export default Header

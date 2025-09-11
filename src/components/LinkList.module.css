@@ -7,67 +7,67 @@
     text-transform: lowercase;
 
     font-size: 20px;
+
+    margin: 0;
+    padding: 0;
 }
 
-@media only screen and (max-width: 600px) {
-    .linkList {
-        margin: 16px;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        overflow-x: hidden;
-    }
+.arrow {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    overflow-x: hidden;
 }
 
-@media only screen and (min-width: 600px) {
-    .linkList {
-        margin: 0;
-        display: flex;
-        gap: 40px;
-    }
+.simple {
+    display: flex;
+    gap: 40px;
 }
 
-.link a span {
+.link p {
+    font-size: 1rem;
+    margin-top: 8px;
+    text-transform: none;
+}
+
+.arrow .link a span {
     text-decoration: underline;
     text-decoration-color: transparent;
     transition: 0.3s;
     text-decoration-thickness: 3px;
 }
 
-.link a:hover span {
+.arrow .link a:hover span {
     text-decoration-color: white;
 }
 
-@media only screen and (max-width: 600px) {
-    .link:before {
-        float: left;
-        width: 0;
-        white-space: nowrap;
-        content: "------------------------------------"
-            "------------------------------------"
-            "------------------------------------";
-        color: #827F72;
+.arrow .link:before {
+    float: left;
+    width: 0;
+    white-space: nowrap;
+    content: "------------------------------------"
+        "------------------------------------"
+        "------------------------------------";
+    color: #827F72;
 
-    }
+}
 
-    .link a {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        white-space: nowrap;
-        text-decoration: none;
-    }
+.arrow .link a {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    white-space: nowrap;
+    text-decoration: none;
+}
 
-    .link a::after {
-        content: "\00a0>";
-        background-color: black;
-        z-index: 1;
-    }
+.arrow .link a::after {
+    content: "\00a0>";
+    background-color: black;
+    z-index: 1;
+}
 
-    .link a span {
-        background-color: black;
-        opacity: 1;
-        padding-right: 1rem;
-    }
+.arrow .link a span {
+    background-color: black;
+    opacity: 1;
+    padding-right: 1rem;
 }

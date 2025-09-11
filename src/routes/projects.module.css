@@ -1,21 +1,18 @@
-.projects {
-  margin-top: 60px;
-}
-
-@media only screen and (max-width: 600px) {
-  .projects {
-    gap: 32px;
-  }
+.linkList {
+  gap: 32px;
+  margin-top: 16px;
 }
 
 @media only screen and (min-width: 600px) {
-  .project:first-child {
+  .linkList {
     grid-column-start: 2;
-    grid-column-end: 6;
+    grid-column-end: -2;
   }
+}
 
-  .project:nth-of-type(2) {
-    grid-column-start: 7;
-    grid-column-end: 11;
+@media only screen and (max-width: 600px) {
+  .linkList {
+    margin-top: 32px;
+    margin-bottom: 16px;
   }
 }

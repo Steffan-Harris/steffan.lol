@@ -22,7 +22,7 @@ function Index() {
           functional web apps focusing on the react and javascript ecosystem
         </h1>
         <nav className={styles.nav}>
-          <LinkList>
+          <LinkList style="arrow">
             <li>
               <Link to="/about">
                 <span>About</span>
@@ -30,7 +30,7 @@ function Index() {
             </li>
             <li>
               <Link to="/projects">
-                <span>Public projects</span>
+                <span>Projects</span>
               </Link>
             </li>
           </LinkList>

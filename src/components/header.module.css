@@ -75,6 +75,10 @@
     }
 }
 
+.navLinks {
+    margin: 16px;
+}
+
 /**** hide nav button ****/
 
 @media only screen and (max-width: 600px) {
