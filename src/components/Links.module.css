@@ -21,21 +21,35 @@
   content: "------------------------------------"
     "------------------------------------"
     "------------------------------------";
+  color: #827F72;
 }
 
 .links a {
   width: 100%;
-  display: inline-block;
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
 }
 
-.links a:after {
+.links a span {
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 3px;
+  transition: 0.3s;
+}
+
+.links a:hover span {
+  text-decoration-color: white;
+}
+
+.links a::after {
   content: "\00a0>";
-  float: right;
   background-color: black;
   z-index: 1;
 }
 
 .links a span {
   background-color: black;
-  padding-right: 0.5em;
+  opacity: 1;
+  padding-right: 1rem;
 }

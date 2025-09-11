@@ -1,0 +1,183 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background-color: black;
+}
+
+@media only screen and (max-width: 600px) {
+    .header {
+        padding: 16px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .header {
+        padding-top: 16px;
+    }
+}
+
+.pageTitle {
+    margin: 0;
+    font-family: "Quantico", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: lowercase;
+    transition: 0.3s;
+
+}
+
+@media only screen and (max-width: 600px) {
+    .pageTitle {
+        font-size: 32px;
+        line-height: 36px;
+    }
+
+    .pageTitle.hidden {
+        opacity: 0;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .pageTitle {
+        font-size: 40px;
+        line-height: 56px;
+    }
+}
+
+.showNav {
+    align-self: center;
+    display: flex;
+}
+
+.navLinkList {
+    list-style-type: none;
+
+    font-family: "Orbit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: lowercase;
+
+    font-size: 20px;
+}
+
+.navLink a span {
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: 0.3s;
+    text-decoration-thickness: 3px;
+}
+
+.navLink a:hover span {
+    text-decoration-color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    .nav {
+        flex-direction: column;
+        display: flex;
+        height: 100%;
+        width: 0%;
+        transition: 0.3s;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        overflow-x: hidden;
+        background-color: black;
+    }
+
+    .hideNav {
+        margin: 16px;
+        height: 36px;
+        display: flex;
+    }
+
+    .hideNav a {
+        align-self: center;
+    }
+
+    .hideNav img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .navLinkList {
+        margin: 16px;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        overflow-x: hidden;
+    }
+
+
+    .navLink:before {
+        float: left;
+        width: 0;
+        white-space: nowrap;
+        content: "------------------------------------"
+            "------------------------------------"
+            "------------------------------------";
+        color: #827F72;
+
+    }
+
+    .navLink a {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        white-space: nowrap;
+        text-decoration: none;
+    }
+
+    .navLink a::after {
+        content: "\00a0>";
+        background-color: black;
+        z-index: 1;
+    }
+
+    .navLink a span {
+        background-color: black;
+        opacity: 1;
+        padding-right: 1rem;
+    }
+
+    .externalLinks {
+        display: flex;
+        list-style-type: none;
+        margin: 64px 0 0 0;
+        padding: 0;
+        gap: 32px;
+    }
+
+    .externalLinks li a {
+        color: #827F72;
+        font-size: 7px;
+        transition: 0.2s;
+    }
+
+    .externalLinks li a:hover {
+        text-decoration: none;
+        color: white;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .nav {
+        align-self: center;
+    }
+
+    .showNav,
+    .hideNav,
+    .externalLinks {
+        display: none;
+    }
+
+    .navLinkList {
+        margin: 0;
+        display: flex;
+        gap: 40px;
+    }
+}
