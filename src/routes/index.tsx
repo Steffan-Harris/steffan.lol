@@ -1,10 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import styles from "./index.module.css";
-import Links from "../components/Links";
 import TextArt from "../components/TextArt";
 import githubArt from "../assets/github.art";
 import emailArt from "../assets/email.art";
 import linkedinArt from "../assets/linkedin.art";
+import LinkList from "../components/LinkList";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -22,7 +22,7 @@ function Index() {
           functional web apps focusing on the react and javascript ecosystem
         </h1>
         <nav className={styles.nav}>
-          <Links>
+          <LinkList>
             <li>
               <Link to="/about">
                 <span>About</span>
@@ -33,7 +33,7 @@ function Index() {
                 <span>Public projects</span>
               </Link>
             </li>
-          </Links>
+          </LinkList>
         </nav>
         <footer className={styles.footer}>
           <ul className={styles.externalLinks}>

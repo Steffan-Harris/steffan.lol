@@ -6,6 +6,7 @@ import menuClose from '../assets/menu-close.png'
 import useScrollPosition from "../hooks/useScrollPosition"
 import clsx from "clsx"
 import ExternalLinks from "./ExternalLinks"
+import LinkList from "./LinkList"
 
 interface HeaderProps {
     pageTitle: string
@@ -43,7 +44,7 @@ function Header({ pageTitle }: PropsWithChildren<HeaderProps>) {
                 </a>
             </div>
             <nav>
-                <ul className={styles.navLinkList}>
+                <LinkList>
                     <li className={styles.navLink}>
                         <Link to="/">
                             <span>Home</span>
@@ -60,7 +61,7 @@ function Header({ pageTitle }: PropsWithChildren<HeaderProps>) {
                         </Link>
                     </li>
                     <ExternalLinks className={styles.externalLinks} />
-                </ul>
+                </LinkList>
             </nav>
         </div>
     </header >
