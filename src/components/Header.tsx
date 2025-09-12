@@ -1,4 +1,4 @@
-import { useRef, type PropsWithChildren } from "react"
+import { useState, type PropsWithChildren } from "react"
 import styles from './Header.module.css'
 import { Link } from "@tanstack/react-router"
 import menu from '../assets/menu.png'
@@ -14,16 +14,12 @@ interface HeaderProps {
 }
 
 function Header({ pageTitle }: PropsWithChildren<HeaderProps>) {
-    const navRef = useRef<HTMLDivElement>(null)
     const scrollPosition = useScrollPosition()
     const { width } = useWindowDimensions()
+    const [isNavOpen, setIsNavOpen] = useState(false)
 
     return <header className={styles.header}>
-        <a className={styles.showNav} href='javascript:void(0)' onClick={() => {
-            if (navRef.current) {
-                navRef.current.classList.add(styles.open)
-            }
-        }}>
+        <a className={styles.showNav} onClick={() => setIsNavOpen(true)}>
             <img
                 src={menu}
                 alt="Show navigation"
@@ -32,13 +28,9 @@ function Header({ pageTitle }: PropsWithChildren<HeaderProps>) {
 
         <h2 className={clsx(styles.pageTitle, scrollPosition < 60 && styles.hidden)}>{pageTitle}</h2>
 
-        <div className={styles.nav} ref={navRef}>
+        <div className={clsx(styles.nav, isNavOpen && styles.open)}>
             <div className={styles.hideNav}>
-                <a href="javascript: void(0)" onClick={() => {
-                    if (navRef.current) {
-                        navRef.current.classList.remove(styles.open)
-                    }
-                }}>
+                <a onClick={() => setIsNavOpen(false)}>
                     <img
                         src={menuClose}
                         alt="Hide navigation"
@@ -47,17 +39,17 @@ function Header({ pageTitle }: PropsWithChildren<HeaderProps>) {
             </div>
             <nav className={styles.navLinks}>
                 <LinkList style={width > 600 ? 'simple' : 'arrow'}>
-                    <li className={styles.navLink}>
+                    <li>
                         <Link to="/">
                             <span>Home</span>
                         </Link>
                     </li>
-                    <li className={styles.navLink}>
+                    <li>
                         <Link to="/about">
                             <span>About</span>
                         </Link>
                     </li>
-                    <li className={styles.navLink}>
+                    <li>
                         <Link to="/projects">
                             <span>Projects</span>
                         </Link>
