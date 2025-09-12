@@ -14,17 +14,17 @@ interface ExternalLinksProps {
 function ExternalLinks({ className, size = 'md' }: PropsWithChildren<ExternalLinksProps>) {
     return <ul className={clsx(styles.externalLinks, styles[size], className)}>
         <li>
-            <a href='https://github.com/Steffan-Harris'>
+            <a href='https://github.com/Steffan-Harris' title="Steffan's Github page">
                 <TextArt label="ASCII art depicting the Github logo">{githubArt}</TextArt>
             </a>
         </li>
         <li>
-            <a href='mailto:contact@steffan.lol'>
+            <a href='mailto:contact@steffan.lol' title="Send Steffan an email">
                 <TextArt label="ASCII art depicting an email">{emailArt}</TextArt>
             </a>
         </li>
         <li>
-            <a href='https://www.linkedin.com/in/steffanharris/'>
+            <a href='https://www.linkedin.com/in/steffanharris/' title="Steffan's LinkedIn page">
                 <TextArt label="ASCII art depicting the Linkedin logo">{linkedinArt}</TextArt>
             </a>
         </li>
