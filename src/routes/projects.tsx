@@ -13,14 +13,14 @@ function RouteComponent() {
     <MainLayout className={styles.projects} pageTitle="Projects">
       <LinkList style="arrow" className={styles.linkList}>
         <li>
-          <a href="https://github.com/Steffan-Harris/steffan.lol">
+          <a href="https://github.com/Steffan-Harris/steffan.lol" title="Github repository for steffan.lol">
             <span>steffan.lol</span>
           </a>
           <Paragraph>The Github repo for this site.
             Vite + React.</Paragraph>
         </li>
         <li>
-          <a href="https://blitzjs.com">
+          <a href="https://blitzjs.com" title="Homepage of BlitzJS">
             <span>blitzjs.com</span>
           </a>
           <Paragraph>The frontpage of Blitz. NextJS + Tailwind.</Paragraph>

@@ -22,12 +22,12 @@ function Index() {
         <nav className={styles.nav}>
           <LinkList style="arrow">
             <li>
-              <Link to="/about">
+              <Link to="/about" title="About page">
                 <span>About</span>
               </Link>
             </li>
             <li>
-              <Link to="/projects">
+              <Link to="/projects" title="Projects page">
                 <span>Projects</span>
               </Link>
             </li>

@@ -43,17 +43,17 @@ function Header({ pageTitle }: PropsWithChildren<HeaderProps>) {
             <nav className={styles.navLinks}>
                 <LinkList style={width > 600 ? 'simple' : 'arrow'}>
                     <li>
-                        <Link to="/">
+                        <Link to="/" title="Homepage">
                             <span>Home</span>
                         </Link>
                     </li>
                     <li>
-                        <Link to="/about">
+                        <Link to="/about" title="About page">
                             <span>About</span>
                         </Link>
                     </li>
                     <li>
-                        <Link to="/projects">
+                        <Link to="/projects" title="Projects page">
                             <span>Projects</span>
                         </Link>
                     </li>
