@@ -3,12 +3,12 @@ import ExternalLinks from "./ExternalLinks"
 import styles from './Footer.module.css'
 
 interface FooterProps {
-    useGrid?: boolean
+    style?: 'grid' | 'flex'
     className?: string
 }
 
-function Footer({ useGrid = false, className }: FooterProps) {
-    return <footer className={clsx(styles.footer, useGrid && styles.grid, className)}>
+function Footer({ style = 'flex', className }: FooterProps) {
+    return <footer className={clsx(styles.footer, styles[style], className)}>
         <ExternalLinks className={styles.externalLinks} size="lg" />
         <div className={styles.copyright}>&copy; 2025 steffan harris</div>
     </footer>

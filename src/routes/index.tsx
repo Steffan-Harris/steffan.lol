@@ -32,7 +32,7 @@ function Index() {
             </li>
           </LinkList>
         </nav>
-        <Footer useGrid={false} className={styles.footer} />
+        <Footer style='flex' className={styles.footer} />
       </div>
     </div>
   );

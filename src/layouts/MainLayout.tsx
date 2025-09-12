@@ -23,7 +23,7 @@ function MainLayout({
       <main className={clsx(className, styles.mainContent)}>
         {children}
       </main>
-      <Footer className={clsx(styles.footer, width > 600 && styles.grid)} useGrid={width > 600} />
+      <Footer className={clsx(styles.footer, width > 600 && styles.grid)} style={width > 600 ? 'grid' : 'flex'} />
     </div>
   );
 }

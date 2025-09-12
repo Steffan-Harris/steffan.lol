@@ -14,14 +14,14 @@ function RouteComponent() {
       <Heading>Projects</Heading>
 
       <LinkList style="arrow" className={styles.linkList}>
-        <li className={styles.link}>
+        <li>
           <a href="https://github.com/Steffan-Harris/steffan.lol">
             <span>steffan.lol</span>
           </a>
           <p>The Github repo for this site.
             Vite + React.</p>
         </li>
-        <li className={styles.link}>
+        <li>
           <a href="https://blitzjs.com">
             <span>blitzjs.com</span>
           </a>
