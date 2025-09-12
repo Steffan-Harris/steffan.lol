@@ -9,7 +9,7 @@ interface FooterProps {
 
 function Footer({ style = 'flex', className }: FooterProps) {
     return <footer className={clsx(styles.footer, styles[style], className)}>
-        <ExternalLinks className={styles.externalLinks} size="lg" />
+        <ExternalLinks className={styles.externalLinks} size="md" />
         <div className={styles.copyright}>&copy; 2025 steffan harris</div>
     </footer>
 }

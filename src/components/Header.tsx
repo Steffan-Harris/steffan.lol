@@ -57,7 +57,7 @@ function Header({ pageTitle }: PropsWithChildren<HeaderProps>) {
                             <span>Projects</span>
                         </Link>
                     </li>
-                    <ExternalLinks className={styles.externalLinks} />
+                    <ExternalLinks className={styles.externalLinks} size='md' />
                 </LinkList>
             </nav>
         </div>

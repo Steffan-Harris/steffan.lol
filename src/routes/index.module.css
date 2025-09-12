@@ -26,17 +26,11 @@
   }
 }
 
-.content {
-  display: flex;
-  flex-direction: column;
-}
-
 @media only screen and (max-width: 600px) {
   .content {
     margin-top: 48px;
   }
 }
-
 
 @media only screen and (min-width: 600px) {
   .content {
@@ -51,18 +45,6 @@
 @media only screen and (min-width: 600px) {
   .nav {
     margin-top: 96px;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .footer {
-    margin-top: 128px;
-  }
-}
-
-@media only screen and (min-width: 600px) {
-  .footer {
-    margin-top: 128px;
   }
 }
 

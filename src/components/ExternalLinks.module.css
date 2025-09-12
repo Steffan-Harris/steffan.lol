@@ -1,8 +1,16 @@
 .externalLinks {
     list-style-type: none;
+    gap: 32px;
+}
+
+.externalLinks.lg {
+    margin: 96px 0 0 0;
+    padding: 0;
+}
+
+.externalLinks.md {
     margin: 64px 0 0 0;
     padding: 0;
-    gap: 32px;
 }
 
 .externalLinks li a {
