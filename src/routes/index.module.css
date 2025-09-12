@@ -13,6 +13,7 @@
 }
 
 
+
 .avatar img {
   width: 180px;
   margin: 0 auto;
@@ -45,6 +46,12 @@
 @media only screen and (min-width: 600px) {
   .nav {
     margin-top: 96px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .footer ul {
+    display: flex;
   }
 }
 
