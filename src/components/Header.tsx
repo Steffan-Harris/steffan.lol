@@ -8,6 +8,7 @@ import clsx from "clsx"
 import ExternalLinks from "./ExternalLinks"
 import LinkList from "./LinkList"
 import useWindowDimensions from "../hooks/useWindowDimensions"
+import Heading from "./Heading"
 
 interface HeaderProps {
     pageTitle: string
@@ -26,7 +27,9 @@ function Header({ pageTitle }: PropsWithChildren<HeaderProps>) {
             />
         </a>
 
-        <h2 className={clsx(styles.pageTitle, scrollPosition < 60 && styles.hidden)}>{pageTitle}</h2>
+        <Heading size={width > 600 ? 'xl' : 'lg'} as='h2' className={clsx(scrollPosition < 60 && width <= 600 && styles.hidden)} transform="lowercase">
+            {pageTitle}
+        </Heading>
 
         <div className={clsx(styles.nav, isNavOpen && styles.open)}>
             <div className={styles.hideNav}>

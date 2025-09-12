@@ -8,7 +8,6 @@ import TextArt from "../components/TextArt.tsx";
 import Section from "../components/Section.tsx";
 import Paragraph from "../components/Paragraph.tsx";
 import cloudArt from "../assets/cloud.art.ts";
-import Heading from "../components/Heading.tsx";
 
 export const Route = createFileRoute("/about")({
   component: RouteComponent,
@@ -17,8 +16,6 @@ export const Route = createFileRoute("/about")({
 function RouteComponent() {
   return (
     <MainLayout pageTitle="About" className={styles.about}>
-      <Heading>About</Heading>
-
       <Section heading="1988" className={styles.section}>
         <Paragraph>
           I grew up around Macintosh computers. My dad encouraged me to experiment and play games on them.

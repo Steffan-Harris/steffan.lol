@@ -1,14 +1,24 @@
 .heading {
     margin: 0;
-    font-size: 32px;
     font-family: "Quantico", sans-serif;
-    font-weight: 400;
     font-style: normal;
-    text-transform: lowercase;
 }
 
-@media only screen and (min-width: 600px) {
-    .heading {
-        display: none;
-    }
+.md {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.lg {
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.xl {
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.lowercase {
+    text-transform: lowercase;
 }

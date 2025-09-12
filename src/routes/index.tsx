@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import styles from "./index.module.css";
 import LinkList from "../components/LinkList";
 import Footer from "../components/Footer";
+import Heading from "../components/Heading";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -14,10 +15,10 @@ function Index() {
         <img src="logo.png" alt="Photo of Steffan" />
       </div>
       <div className={styles.content}>
-        <h1 className={styles.intro}>
+        <Heading as='h1' size="xl">
           I am a web developer and UI student creating beautiful and
           functional web apps focusing on the react and javascript ecosystem
-        </h1>
+        </Heading>
         <nav className={styles.nav}>
           <LinkList style="arrow">
             <li>

@@ -1,6 +1,7 @@
 import type { PropsWithChildren } from "react";
 import styles from "./Section.module.css";
 import clsx from "clsx";
+import Heading from "./Heading";
 
 interface SectionProps {
   heading: string;
@@ -10,7 +11,7 @@ interface SectionProps {
 function Section({ children, className, heading }: PropsWithChildren<SectionProps>) {
   return (
     <section className={clsx(styles.section, className)}>
-      <h2 className={styles.heading}>{heading}</h2>
+      <Heading as='h2' size='md'>{heading}</Heading>
 
       {children}
     </section>
