@@ -16,7 +16,7 @@ function Index() {
       </div>
       <div className={styles.content}>
         <Heading as='h1' size="xl">
-          I am a web developer and UI student creating beautiful and
+          I am a frontend developer and UI student creating beautiful and
           functional web apps focusing on the react and javascript ecosystem
         </Heading>
         <nav className={styles.nav}>
