@@ -1,24 +1,6 @@
 .heading {
-    margin: 0;
-    font-family: "Quantico", sans-serif;
-    font-style: normal;
-}
-
-.md {
-    font-size: 20px;
-    font-weight: 700;
-}
-
-.lg {
+    font-family: 'Orbit', sans-serif;
     font-size: 32px;
-    font-weight: 400;
-}
-
-.xl {
-    font-size: 40px;
-    font-weight: 400;
-}
-
-.lowercase {
-    text-transform: lowercase;
+    text-transform: uppercase;
+    margin: 0;
 }
