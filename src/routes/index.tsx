@@ -18,12 +18,12 @@ function Index() {
         Software engineer committed to enhancing user experiences
       </Heading>
       <Avatar className={styles.avatar} />
-      <Summary heading='Technical Skills'>
+      <Summary heading="Technical Skills">
         <SummaryItem>ReactJS</SummaryItem>
         <SummaryItem>TypeScript</SummaryItem>
         <SummaryItem>UI Design</SummaryItem>
       </Summary>
-      <Summary heading='Experience'>
+      <Summary heading="Experience">
         <SummaryItem>Sainsbury's</SummaryItem>
         <SummaryItem>Vodafone</SummaryItem>
         <SummaryItem>Red Technology</SummaryItem>

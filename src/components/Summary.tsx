@@ -1,15 +1,17 @@
-import type { PropsWithChildren } from "react"
-import styles from './Summary.module.css'
+import type { PropsWithChildren } from "react";
+import styles from "./Summary.module.css";
 
 interface SummaryProps {
-    heading: string;
+  heading: string;
 }
 
 function Summary({ children, heading }: PropsWithChildren<SummaryProps>) {
-    return <section>
-        <h2 className={styles.heading}>{heading}</h2>
-        <ul className={styles.items}>{children}</ul>
+  return (
+    <section>
+      <h2 className={styles.heading}>{heading}</h2>
+      <ul className={styles.items}>{children}</ul>
     </section>
+  );
 }
 
-export default Summary
+export default Summary;
