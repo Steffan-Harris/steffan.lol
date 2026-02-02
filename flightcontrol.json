@@ -17,7 +17,7 @@
           "ci": {
             "type": "ec2"
           },
-          "buildCommand": "vite build",
+          "buildCommand": "npm run build",
           "outputDirectory": "dist",
           "singlePageApp": true
         }
