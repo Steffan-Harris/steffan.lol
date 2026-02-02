@@ -1,0 +1,27 @@
+{
+  "$schema": "https://app.flightcontrol.dev/schema.json",
+  "environments": [
+    {
+      "id": "production",
+      "name": "Production",
+      "region": "eu-west-1",
+      "source": {
+        "branch": "main"
+      },
+      "services": [
+        {
+          "id": "production-static-site",
+          "name": "Static site",
+          "type": "static",
+          "buildType": "nixpacks",
+          "ci": {
+            "type": "ec2"
+          },
+          "buildCommand": "npm run build",
+          "outputDirectory": "dist",
+          "singlePageApp": true
+        }
+      ]
+    }
+  ]
+}
