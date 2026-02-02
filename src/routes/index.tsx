@@ -18,9 +18,12 @@ function Index() {
         Software engineer committed to enhancing user experiences
       </Heading>
       <Avatar className={styles.avatar} />
-      <Summary heading="Technical Skills">
+      <Summary heading="Skills">
         <SummaryItem>ReactJS</SummaryItem>
         <SummaryItem>TypeScript</SummaryItem>
+        <SummaryItem>HTML5</SummaryItem>
+        <SummaryItem>CSS3</SummaryItem>
+        <SummaryItem>Clean Code</SummaryItem>
         <SummaryItem>UI Design</SummaryItem>
       </Summary>
       <Summary heading="Experience">
@@ -28,6 +31,45 @@ function Index() {
         <SummaryItem>Vodafone</SummaryItem>
         <SummaryItem>Red Technology</SummaryItem>
         <SummaryItem>Bee Design Ltd</SummaryItem>
+      </Summary>
+      <Summary heading="Links">
+        <SummaryItem>
+          <a
+            href="/Steffan_Harris_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.link}
+          >
+            CV
+          </a>
+        </SummaryItem>
+        <SummaryItem>
+          <a
+            href="https://www.github.com/Steffan-Harris"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.link}
+          >
+            GitHub
+          </a>
+        </SummaryItem>
+        <SummaryItem>
+          <a
+            href="https://www.linkedin.com/in/steffanharris"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.link}
+          >
+            LinkedIn
+          </a>
+        </SummaryItem>
+      </Summary>
+      <Summary heading="Contact">
+        <SummaryItem>
+          <a href="mailto:hi@steffan.lol" className={styles.link}>
+            hi@steffan.lol
+          </a>
+        </SummaryItem>
       </Summary>
     </div>
   );

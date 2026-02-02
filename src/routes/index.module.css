@@ -1,23 +1,69 @@
 .homepage {
   display: grid;
-  padding: 60px 0;
-  row-gap: 120px;
-  column-gap: 20px;
-  max-width: 1180px;
   margin: 0 auto;
-  grid-template-columns: 2fr 6fr 4fr;
 }
 
-.logo {
-  margin: 0 auto;
-  grid-row-start: span 3;
+.link {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 2rem;
+  position: relative;
 }
 
-.heading {
-  width: 60%;
+.link:hover {
+  text-decoration: none;
 }
 
-.avatar {
-  margin: 0 auto;
-  grid-row-start: span 3;
+.link:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition:
+    width 0.3s ease 0s,
+    left 0.3s ease 0s;
+  width: 0;
+}
+.link:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+@media (min-width: 1180px) {
+  .homepage {
+    grid-template-columns: 2fr 4fr 6fr;
+    padding: 3.75rem 0;
+    row-gap: 11.25rem;
+    column-gap: 1.25rem;
+    max-width: 1180px;
+  }
+
+  .logo {
+    margin: 0 auto;
+    grid-row-start: span 3;
+  }
+
+  .avatar {
+    padding-left: 12.5rem;
+    margin: 0 auto;
+  }
+}
+
+/** Mobile Styles - @todo finish this **/
+@media (max-width: 768px) {
+  .homepage {
+    grid-template-columns: 1fr;
+    row-gap: 5rem;
+    padding: 2.5rem 1.25rem;
+  }
+
+  .logo,
+  .avatar {
+    grid-row-start: auto;
+    grid-column-start: auto;
+  }
 }
