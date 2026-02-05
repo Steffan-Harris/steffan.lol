@@ -3,7 +3,7 @@ import styles from "./Heading.module.css";
 import clsx from "clsx";
 
 interface HeadingProps {
-  className: string;
+  className?: string;
 }
 
 function Heading({ children, className }: PropsWithChildren<HeadingProps>) {

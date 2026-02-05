@@ -1,5 +1,5 @@
 interface LogoProps {
-  className: string;
+  className?: string;
 }
 
 function Logo({ className }: LogoProps) {

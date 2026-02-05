@@ -1,5 +1,5 @@
 interface AvatarProps {
-  className: string;
+  className?: string;
 }
 
 function Avatar({ className }: AvatarProps) {
