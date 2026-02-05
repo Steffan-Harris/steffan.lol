@@ -25,7 +25,7 @@ npm run preview    # Preview production build
 
 ### Router Plugin Order
 
-The TanStack Router plugin **must** be listed before `@vitejs/plugin-react-swc` in [vite.config.ts](vite.config.ts#L6-L12). This generates route tree before React processes JSX.
+The TanStack Router plugin **must** be listed before `@vitejs/plugin-react-swc` in [vite.config.ts](vite.config.ts#L7-L14). This generates route tree before React processes JSX.
 
 ## Code Conventions
 
@@ -38,7 +38,7 @@ The TanStack Router plugin **must** be listed before `@vitejs/plugin-react-swc` 
 ### Routing
 
 - Routes defined in `src/routes/` as `*.tsx` files
-- Use `createFileRoute()` for pages (see [index.tsx](src/routes/index.tsx#L8-L10))
+- Use `createFileRoute()` for pages (see [index.tsx](src/routes/index.tsx#L9-L11))
 - Root route in [\_\_root.tsx](src/routes/__root.tsx) uses `createRootRoute()` with `<Outlet />`
 - Router instance in [main.tsx](src/main.tsx#L10) has `scrollRestoration: true`
 
