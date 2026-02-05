@@ -71,7 +71,6 @@
   }
 }
 
-/** Mobile Styles - @todo finish this **/
 @media (max-width: 768px) {
   .homepage {
     grid-template-columns: 1fr;
