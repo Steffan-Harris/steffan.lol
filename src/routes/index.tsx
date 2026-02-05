@@ -18,7 +18,7 @@ function Index() {
         Software engineer committed to enhancing user experiences
       </Heading>
       <Avatar className={styles.avatar} />
-      <Summary heading="Skills">
+      <Summary heading="Skills" className={styles.summary}>
         <SummaryItem>ReactJS</SummaryItem>
         <SummaryItem>TypeScript</SummaryItem>
         <SummaryItem>HTML5</SummaryItem>
@@ -26,13 +26,13 @@ function Index() {
         <SummaryItem>Clean Code</SummaryItem>
         <SummaryItem>UI Design</SummaryItem>
       </Summary>
-      <Summary heading="Experience">
+      <Summary heading="Experience" className={styles.summary}>
         <SummaryItem>Sainsbury's</SummaryItem>
         <SummaryItem>Vodafone</SummaryItem>
         <SummaryItem>Red Technology</SummaryItem>
         <SummaryItem>Bee Design Ltd</SummaryItem>
       </Summary>
-      <Summary heading="Links">
+      <Summary heading="Links" className={styles.summary}>
         <SummaryItem>
           <a
             href="/Steffan_Harris_CV.pdf"
@@ -64,7 +64,7 @@ function Index() {
           </a>
         </SummaryItem>
       </Summary>
-      <Summary heading="Contact">
+      <Summary heading="Contact" className={styles.summary}>
         <SummaryItem>
           <a href="mailto:hi@steffan.lol" className={styles.link}>
             hi@steffan.lol
