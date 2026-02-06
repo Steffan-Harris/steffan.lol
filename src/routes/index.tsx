@@ -1,8 +1,10 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import styles from "./index.module.css";
-import LinkList from "../components/LinkList";
-import Footer from "../components/Footer";
 import Heading from "../components/Heading";
+import Summary from "../components/Summary";
+import Logo from "../components/Logo";
+import SummaryItem from "../components/SummaryItem";
+import Avatar from "../components/Avatar";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -11,30 +13,64 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <div className={styles.homepage}>
-      <div className={styles.avatar}>
-        <img src="logo.png" alt="Photo of Steffan" />
-      </div>
-      <div className={styles.content}>
-        <Heading as='h1' size="xl">
-          I am a frontend developer and UI student creating beautiful and
-          functional web apps focusing on the react and javascript ecosystem
-        </Heading>
-        <nav className={styles.nav}>
-          <LinkList style="arrow">
-            <li>
-              <Link to="/about" title="About page">
-                <span>About</span>
-              </Link>
-            </li>
-            <li>
-              <Link to="/projects" title="Projects page">
-                <span>Projects</span>
-              </Link>
-            </li>
-          </LinkList>
-        </nav>
-        <Footer style='flex' className={styles.footer} />
-      </div>
+      <Logo className={styles.logo} />
+      <Heading className={styles.heading}>
+        Software engineer committed to enhancing user experiences
+      </Heading>
+      <Avatar className={styles.avatar} />
+      <Summary heading="Skills" className={styles.summary}>
+        <SummaryItem>ReactJS</SummaryItem>
+        <SummaryItem>TypeScript</SummaryItem>
+        <SummaryItem>HTML5</SummaryItem>
+        <SummaryItem>CSS3</SummaryItem>
+        <SummaryItem>Clean Code</SummaryItem>
+        <SummaryItem>UI Design</SummaryItem>
+      </Summary>
+      <Summary heading="Experience" className={styles.summary}>
+        <SummaryItem>Sainsbury's</SummaryItem>
+        <SummaryItem>Vodafone</SummaryItem>
+        <SummaryItem>Red Technology</SummaryItem>
+        <SummaryItem>Bee Design Ltd</SummaryItem>
+      </Summary>
+      <Summary heading="Links" className={styles.summary}>
+        <SummaryItem>
+          <a
+            href="/Steffan_Harris_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.link}
+          >
+            CV
+          </a>
+        </SummaryItem>
+        <SummaryItem>
+          <a
+            href="https://www.github.com/Steffan-Harris"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.link}
+          >
+            GitHub
+          </a>
+        </SummaryItem>
+        <SummaryItem>
+          <a
+            href="https://www.linkedin.com/in/steffanharris"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.link}
+          >
+            LinkedIn
+          </a>
+        </SummaryItem>
+      </Summary>
+      <Summary heading="Contact" className={styles.summary}>
+        <SummaryItem>
+          <a href="mailto:hi@steffan.lol" className={styles.link}>
+            hi@steffan.lol
+          </a>
+        </SummaryItem>
+      </Summary>
     </div>
   );
 }

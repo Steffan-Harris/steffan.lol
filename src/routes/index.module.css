@@ -1,60 +1,88 @@
 .homepage {
-  margin: 16px;
+  display: grid;
+  margin: 0 auto;
 }
 
-@media only screen and (min-width: 600px) {
+.link {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 2rem;
+  position: relative;
+}
+
+.link:hover {
+  text-decoration: none;
+}
+
+.link:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition:
+    width 0.3s ease 0s,
+    left 0.3s ease 0s;
+  width: 0;
+}
+.link:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+@media (min-width: 1180px) {
   .homepage {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr 7fr 1fr;
-    gap: 10px;
-    margin: 40px auto;
+    grid-template-columns: 2fr 4fr 6fr;
+    padding: 3.75rem 0;
+    row-gap: 11.25rem;
+    column-gap: 1.25rem;
     max-width: 1180px;
   }
-}
 
+  .logo {
+    margin: 0 auto;
+    grid-row-start: span 3;
+  }
 
-
-.avatar img {
-  width: 180px;
-  margin: 0 auto;
-  display: block;
-}
-
-@media only screen and (min-width: 600px) {
   .avatar {
-    grid-column-start: 2;
-    margin: 0;
+    padding-left: 12.5rem;
+    margin: 0 auto;
   }
 }
 
-@media only screen and (max-width: 600px) {
-  .content {
-    margin-top: 48px;
+@media (min-width: 768px) and (max-width: 1179px) {
+  .homepage {
+    grid-template-columns: 2fr 5fr 5fr;
+    row-gap: 5rem;
+    padding: 3.75rem 1.25rem;
+    max-width: 1179px;
+  }
+
+  .logo {
+    margin: 0 auto;
+    grid-row-start: span 3;
+  }
+
+  .avatar {
+    margin: 0 auto;
   }
 }
 
-@media only screen and (min-width: 600px) {
-  .content {
-    grid-column-start: 4;
+@media (max-width: 768px) {
+  .homepage {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+    padding: 2.5rem 1.25rem;
   }
-}
 
-.nav {
-  margin-top: 64px;
-}
-
-@media only screen and (min-width: 600px) {
-  .nav {
-    margin-top: 96px;
+  .avatar {
+    margin: 2rem 0;
   }
-}
 
-@media only screen and (max-width: 600px) {
-  .footer ul {
-    display: flex;
+  .summary {
+    margin: 1rem 0;
   }
-}
-
-.copyright {
-  color: #827F72;
 }
