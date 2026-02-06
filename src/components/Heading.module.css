@@ -3,4 +3,11 @@
   font-size: 1.75rem;
   text-transform: uppercase;
   margin: 0;
+  font-weight: 400;
+}
+
+@media (max-width: 1179px) {
+  .heading {
+    font-size: 1.5rem;
+  }
 }
