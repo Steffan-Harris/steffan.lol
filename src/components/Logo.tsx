@@ -1,3 +1,6 @@
+import clsx from "clsx";
+import styles from "./Logo.module.css";
+
 interface LogoProps {
   className?: string;
 }
@@ -7,9 +10,7 @@ function Logo({ className }: LogoProps) {
     <img
       src="logo.png"
       alt="Steffan Harris Logo"
-      width="80"
-      height="80"
-      className={className}
+      className={clsx(className, styles.logo)}
     />
   );
 }

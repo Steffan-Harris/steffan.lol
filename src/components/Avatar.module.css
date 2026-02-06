@@ -1,3 +1,13 @@
 .avatar {
   border-radius: 3rem;
+  width: 11.25rem;
+  height: 11.25rem;
+}
+
+@media (max-width: 1179px) {
+  .avatar {
+    width: 8.75rem;
+    height: 8.75rem;
+    border-radius: 2.5rem;
+  }
 }
