@@ -6,7 +6,7 @@
 .link {
   text-transform: uppercase;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 1.75rem;
   position: relative;
 }
 
@@ -48,7 +48,6 @@
   }
 
   .avatar {
-    padding-left: 12.5rem;
     margin: 0 auto;
   }
 }

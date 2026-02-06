@@ -1,3 +1,6 @@
+import clsx from "clsx";
+import styles from "./Avatar.module.css";
+
 interface AvatarProps {
   className?: string;
 }
@@ -7,9 +10,9 @@ function Avatar({ className }: AvatarProps) {
     <img
       src="avatar.png"
       alt="Photograph of Steffan"
-      width="200"
-      height="200"
-      className={className}
+      width="180"
+      height="180"
+      className={clsx(styles.avatar, className)}
     />
   );
 }
