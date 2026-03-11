@@ -2,8 +2,8 @@
   "envVariables": {},
   "environments": [
     {
-      "id": "steffanlol-Yj3qjA",
-      "name": "steffan.lol",
+      "id": "production",
+      "name": "Production",
       "region": "eu-west-1",
       "source": {
         "pr": false,
