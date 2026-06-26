@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import type * as React from "react";
 import { useEffect, useRef, useState } from "react";
+import styles from "./playground.module.css";
 
 export const Route = createFileRoute("/playground")({
   component: Playground,
@@ -112,7 +113,7 @@ function Playground() {
         aria-label="Particles playground canvas"
         onPointerDown={(e) => setPointer(e, true)}
         onPointerMove={(e) => {
-          if (pointerRef.current?.down) setPointer(e, true)
+          if (pointerRef.current?.down) setPointer(e, true);
         }}
         onPointerUp={(e) => setPointer(e, false)}
         onPointerLeave={(e) => setPointer(e, false)}
