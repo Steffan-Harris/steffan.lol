@@ -1,0 +1,220 @@
+.page {
+  font-family: "Quantico", sans-serif;
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 3.75rem 1.5rem 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.homeLink {
+  align-self: flex-start;
+  text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
+}
+
+.back {
+  align-self: flex-start;
+}
+
+.name {
+  font-family: "Orbit", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+}
+
+.role {
+  font-family: "Orbit", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0 0 1rem 0;
+}
+
+.summary {
+  line-height: 1.6;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sectionHeading {
+  font-family: "Orbit", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0;
+  border-bottom: 1px solid #cbc7b2;
+  padding-bottom: 0.5rem;
+}
+
+.entry {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.entryTitle {
+  font-weight: bold;
+  margin: 0;
+}
+
+.entryToggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.entryToggle:hover {
+  opacity: 0.8;
+}
+
+.chevron {
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.chevronOpen {
+  transform: rotate(-180deg);
+}
+
+.entryMeta {
+  margin: 0 0 0.25rem 0;
+  line-height: 1.5;
+}
+
+.bullets {
+  margin: 0;
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  line-height: 1.5;
+}
+
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding-left: 1.75rem;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0.4rem;
+  bottom: 0.4rem;
+  left: 0.3125rem;
+  width: 2px;
+  background: rgba(203, 199, 178, 0.25);
+}
+
+.timelineItem {
+  position: relative;
+  opacity: 0;
+  transform: translateY(1rem);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+
+.timelineItem.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timelineDot {
+  position: absolute;
+  top: 0.4rem;
+  left: -1.75rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 0 4px black;
+}
+
+.timelineDate {
+  font-family: "Orbit", sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  opacity: 0.7;
+  margin: 0 0 0.4rem 0;
+}
+
+.skillsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.skillRow {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.link {
+  text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
+}
+
+.link:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition:
+    width 0.3s ease 0s,
+    left 0.3s ease 0s;
+  width: 0;
+}
+
+.link:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+@media (max-width: 767px) {
+  .name {
+    font-size: 1.75rem;
+  }
+
+  .role {
+    font-size: 1rem;
+  }
+
+  .sectionHeading {
+    font-size: 1rem;
+  }
+}

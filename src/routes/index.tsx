@@ -46,15 +46,13 @@ function Index() {
         </Summary>
         <Summary heading="Links" className={styles.summary}>
           <SummaryItem>
-            <a
-              href="/Steffan_Harris_CV.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/work-experience"
               className={styles.link}
-              title="View my CV"
+              title="View my work experience"
             >
-              CV
-            </a>
+              Work Experience
+            </Link>
           </SummaryItem>
           <SummaryItem>
             <a
