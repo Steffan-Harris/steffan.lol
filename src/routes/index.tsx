@@ -18,7 +18,7 @@ function Index() {
         Software engineer committed to enhancing user experiences
       </Heading>
       <div className={styles.contact}>
-        <a href="mailto:hi@steffan.lol" title="Email me">
+        <a href="mailto:hi@steffan.lol" title="Email me" aria-label="Email me">
           <Avatar className={styles.avatar} />
         </a>
         <a
