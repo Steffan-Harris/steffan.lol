@@ -77,7 +77,7 @@
     row-gap: 6rem;
   }
 
-  .summary:nth-child(n) {
+  .summary {
     grid-column: 1 / span 3;
   }
 
