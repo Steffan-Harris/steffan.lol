@@ -109,9 +109,10 @@ function Playground() {
       <canvas
         ref={canvasRef}
         className={styles.canvas}
+        aria-label="Particles playground canvas"
         onPointerDown={(e) => setPointer(e, true)}
         onPointerMove={(e) => {
-          if (pointerRef.current?.down) setPointer(e, true);
+          if (pointerRef.current?.down) setPointer(e, true)
         }}
         onPointerUp={(e) => setPointer(e, false)}
         onPointerLeave={(e) => setPointer(e, false)}
