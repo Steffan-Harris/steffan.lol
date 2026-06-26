@@ -126,7 +126,7 @@ function WorkExperience() {
             const isOpen = openIndices.has(index);
             return (
               <div
-                key={entry.title}
+                key={`${entry.title}-${entry.date}`}
                 ref={registerItem(index)}
                 className={styles.timelineItem}
               >
