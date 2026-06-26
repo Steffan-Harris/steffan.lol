@@ -158,7 +158,7 @@ function WorkExperience() {
                     <p className={styles.entryMeta}>{entry.meta}</p>
                   )}
                   {entry.bullets && isOpen && (
-                    <ul className={styles.bullets}>
+                    <ul id={`entry-bullets-${index}`} className={styles.bullets}>
                       {entry.bullets.map((bullet) => (
                         <li key={bullet}>{bullet}</li>
                       ))}
