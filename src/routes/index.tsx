@@ -87,6 +87,17 @@ function Index() {
               Particles
             </Link>
           </SummaryItem>
+          <SummaryItem>
+            <a
+              href="https://pet-dashboard.steffan.lol/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.link}
+              title="View my Pet Dashboard project"
+            >
+              Pet Dashboard
+            </a>
+          </SummaryItem>
         </Summary>
       </div>
     </div>
