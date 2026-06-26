@@ -137,7 +137,7 @@ function WorkExperience() {
                     <button
                       type="button"
                       className={clsx(styles.entryTitle, styles.entryToggle)}
-                      aria-expanded={isOpen}
+                      aria-expanded={isOpen} aria-controls={isOpen ? `entry-bullets-${index}` : undefined}
                       onClick={() => toggleEntry(index)}
                     >
                       <span>{entry.title}</span>
