@@ -71,14 +71,18 @@
   }
 
   .summaries {
-    grid-column: content / span 6;
+    grid-column: content / span 7;
     display: grid;
     grid-template-columns: subgrid;
     row-gap: 6rem;
   }
 
-  .summary {
-    grid-column: span 3;
+  .summary:nth-child(n) {
+    grid-column: 1 / span 3;
+  }
+
+  .summary:nth-child(2n) {
+    grid-column: 5 / span 3;
   }
 }
 
