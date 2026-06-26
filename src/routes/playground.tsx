@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import type * as React from "react";
 import { useEffect, useRef, useState } from "react";
-import styles from "./playground.module.css";
 
 export const Route = createFileRoute("/playground")({
   component: Playground,
