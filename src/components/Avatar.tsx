@@ -7,13 +7,11 @@ interface AvatarProps {
 
 function Avatar({ className }: AvatarProps) {
   return (
-    <div className={className}>
-      <img
-        src="avatar.png"
-        alt="Photograph of Steffan"
-        className={clsx(styles.avatar)}
-      />
-    </div>
+    <img
+      src="avatar.png"
+      alt="Photograph of Steffan"
+      className={clsx(styles.avatar, className)}
+    />
   );
 }
 
