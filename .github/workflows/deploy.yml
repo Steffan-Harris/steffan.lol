@@ -65,4 +65,4 @@ jobs:
             cd "${{ secrets.DEPLOY_PATH }}"
             docker compose pull steffan-lol
             docker compose up -d steffan-lol
-            docker image prune -f
+            docker image prune -f --filter "until=168h"
