@@ -1,0 +1,7 @@
+# Add this block to the Caddyfile already in use on the Hetzner server
+# (the one read by the existing Caddy container), then reload Caddy:
+#   docker exec <caddy-container-name> caddy reload --config /etc/caddy/Caddyfile
+
+steffan.lol, www.steffan.lol {
+    reverse_proxy steffan-lol:80
+}
