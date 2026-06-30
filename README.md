@@ -8,7 +8,7 @@ Personal site for Steffan Harris — a single-page profile (avatar, skills, expe
 - [TanStack Router](https://tanstack.com/router) (file-based routing, codegen via `@tanstack/router-plugin`)
 - [Vite](https://vite.dev/) with the SWC React plugin
 - CSS Modules for component styling
-- Deployed via [Flightcontrol](https://www.flightcontrol.dev/)
+- Deployed via Docker + [Caddy](https://caddyserver.com/) on Hetzner, built and pushed by GitHub Actions
 
 ## Scripts
 

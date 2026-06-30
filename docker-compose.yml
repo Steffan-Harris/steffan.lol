@@ -1,0 +1,23 @@
+# Run this as its own stack on the Hetzner server (e.g. docker compose -p steffan-lol up -d).
+#
+# Prerequisite (one-time, on the server):
+#   docker network create caddy-net
+#   Attach the existing Caddy container to caddy-net too (see its compose file),
+#   so it can reach this container by service name.
+#
+# Then add a matching block to your Caddyfile, e.g.:
+#   steffan.lol {
+#       reverse_proxy steffan-lol:80
+#   }
+
+services:
+  steffan-lol:
+    image: ghcr.io/steffan-harris/steffan.lol:latest
+    container_name: steffan-lol
+    restart: unless-stopped
+    networks:
+      - caddy-net
+
+networks:
+  caddy-net:
+    external: true
