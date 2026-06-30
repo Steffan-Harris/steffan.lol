@@ -13,7 +13,6 @@
 services:
   steffan-lol:
     image: ghcr.io/steffan-harris/steffan.lol:latest
-    container_name: steffan-lol
     restart: unless-stopped
     networks:
       - caddy-net
